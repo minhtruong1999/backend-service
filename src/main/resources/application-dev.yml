@@ -1,0 +1,34 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+openapi:
+  service:
+    api-docs: api-service
+    server: http://localhost:${server.port}
+    title: API Document
+    version: 1.0.0
+
+jwt:
+  expiryMinutes: 30
+  expiryDay: 14
+  accessKey: 5a39d38cb5c41c585004c19e6351f8ffb3735e4732d42d72c40684eb0e5a5c3b
+  refreshKey: 238f664176874223345ed767de69341e93feee0126f22b420fbc39798941e4ec
+

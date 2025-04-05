@@ -1,0 +1,2 @@
+spring.mail.username=minhtruong
+spring.email.password=zjvhjdolzrjjwnsd
